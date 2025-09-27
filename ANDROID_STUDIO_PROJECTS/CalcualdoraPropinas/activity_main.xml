@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Este es el archivo de diseño principal de la app.
+  Contiene todos los elementos visuales de la calculadora de propinas,
+  incluyendo campos de entrada, selección de porcentaje, botón y resultado.
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/background_light"
+    tools:context=".MainActivity">
+
+    <!-- -->
+    <EditText
+        android:id="@+id/cuenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total de cuenta"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        android:layout_marginVertical="12dp"
+        android:background="@android:drawable/edit_text"/>
+
+    <EditText
+        android:id="@+id/personas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="N. de personas"
+        android:inputType="number"
+        android:textSize="20sp"
+        android:layout_marginVertical="12dp"
+        android:background="@android:drawable/edit_text"/>
+
+    <RadioGroup
+        android:id="@+id/radiobuttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/cinco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5%"
+            android:buttonTint="@color/cardview_dark_background"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <RadioButton
+            android:id="@+id/diez"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:buttonTint="@color/cardview_dark_background"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <RadioButton
+            android:id="@+id/quince"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%"
+            android:buttonTint="@color/cardview_dark_background"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calcula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#A020F0"
+        android:textColor="@android:color/white"
+        android:paddingVertical="12dp"/>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="36sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:padding="16dp"/>
+</LinearLayout>
